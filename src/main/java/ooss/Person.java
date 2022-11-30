@@ -4,7 +4,7 @@ import java.text.MessageFormat;
 
 public class Person {
     private final int id;
-    private final String name;
+    protected final String name;
     private final int age;
 
 
