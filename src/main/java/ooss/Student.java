@@ -5,6 +5,7 @@ import java.util.Optional;
 
 public class Student extends Person{
     private Klass klass;
+
     public Student(int id, String name, int age) {
         super(id, name, age);
     }
@@ -13,7 +14,12 @@ public class Student extends Person{
     public String introduce() {
         String introduceString = super.introduce() + " I am a student.";
         if(Optional.ofNullable(this.klass).isPresent()) {
-            introduceString += MessageFormat.format(" I am in class {0}.", klass.getNumber());
+            if(this.klass.isLeader(this)){
+                introduceString += MessageFormat.format(" I am the leader of class {0}.", klass.getNumber());
+            }
+            else {
+                introduceString += MessageFormat.format(" I am in class {0}.", klass.getNumber());
+            }
         }
         return introduceString;
     }
