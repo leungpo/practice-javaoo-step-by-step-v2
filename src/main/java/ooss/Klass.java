@@ -59,12 +59,14 @@ public class Klass {
                         .getNumber();
                 System.out.println(MessageFormat.format("I am {0}, teacher of Class {1}." +
                         " I know {2} become Leader.",teacher.name,classNo,teacher.klass.stream().findFirst()
-                        .get().leader.name));
+                        .get().leader.name
+                ));
             }
         }
     }
 
     public void attach(Person person) {
+
         this.person = person;
 
     }
