@@ -1,6 +1,7 @@
 package ooss;
 
 public class Klass {
+
     private final int number;
 
     @Override
@@ -20,5 +21,9 @@ public class Klass {
 
     public Klass(int number) {
         this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
     }
 }
